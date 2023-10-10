@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <style>
+    /* Your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px;
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: auto;
+      cursor: pointer;
+
+
+    }
+
+    .header {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .prodimage {
+      width: 150px;
+      height: 150px;
+      border-radius: 10%;
+      margin-bottom: 10px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 300px;
+      right: 1000px;
+
+
+    }
+
+    .checkout {
+
+
+      cursor: pointer;
+      border: 0;
+      border-radius: 4px;
+      font-weight: 600;
+      margin: auto;
+      width: 200px;
+      text-align: center;
+      padding: 10px 0;
+      box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+      transition: 0.4s;
+      background-color: #4CAF50;
+
+    }
+    .prodname{
+      text-align: center;
+    }
+    .price{
+      text-align: center;
+    }
+  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+
+
+<body><br>
+  <h1 style="text-align: center; background-color: rgb(134, 193, 193); border-radius: 15px;">Cart</h1>
+
+  <div class="products">
+    <div class="product">
+      <h2 class="header">Items in Cart</h2>
+      <img class="prodimage" src="images/supermandress.jpg" alt="prodimage">
+      
+      <div class="quantity">
+        <button onclick="decreaseQuantity('supermandress')">-</button>
+        <span id="product1Quantity">
+          <ul id="cartItems.supermandress"></ul>
+        </span>
+        <button onclick="increaseQuantity('supermandress')">+</button>
+      </div>
+      <h3 class="prodname">Superman dress</h3>
+      <div class="price">
+      Price: $15.00
+    </div><br>
+    <div class="delete-button">
+      <!-- Replace the icon with FontAwesome trash icon -->
+      <span class="delete-icon"><i class="fas fa-trash-alt"></i></span>
+    </div>
+    <br>
+      <ul id="cartItems"></ul>
+      <div>Total: $<span id="cartTotal">0.00</span></div>
+    </div>
+
+   
+
+    <div class="product">
+      <h2 class="header">Summary</h2>
+      <div>cost:&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; $15.00</div>
+      <div>shipping:&emsp; &emsp; &emsp; &emsp; &emsp; &nbsp; $5.00</div>
+      <div>---------------------------------------------</div>
+      <ul id="cartItems"></ul>
+      <div>Total: &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;$<span id="cartTotal">20</span></div>
+
+      <div class="checkout">
+        <button onclick="addToCart('supermandress', 20.00)">Checkout</button>
+      </div>
+    </div>
+
+    <!-- Add more products here -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+
+  <script>
+
+    let cartItems = {};
+    let cartTotal = 0;
+
+    function addToCart(productName, price) {
+      if (!cartItems[productName]) {
+        cartItems[productName] = {
+          quantity: 0,
+          price: price
+        };
+      }
+      cartItems[productName].quantity++;
+      cartTotal += price;
+
+      updateCart();
+    }
+
+    function decreaseQuantity(productName) {
+      if (cartItems[productName] && cartItems[productName].quantity > 0) {
+        cartItems[productName].quantity--;
+        cartTotal -= cartItems[productName].price;
+      }
+
+      updateCart();
+    }
+
+    function increaseQuantity(productName) {
+      if (cartItems[productName]) {
+        cartItems[productName].quantity++;
+        cartTotal += cartItems[productName].price;
+      }
+
+      updateCart();
+    }
+
+    function updateCart() {
+      const cartItemsElement = document.getElementById('cartItems');
+      const cartTotalElement = document.getElementById('cartTotal');
+
+      cartItemsElement.innerHTML = '';
+      for (const product in cartItems) {
+        if (cartItems.hasOwnProperty(product)) {
+          const li = document.createElement('li');
+          li.textContent = `${product} - Quantity: ${cartItems[product].quantity} - $${(cartItems[product].price * cartItems[product].quantity).toFixed(2)}`;
+          cartItemsElement.appendChild(li);
+        }
+      }
+
+      cartTotalElement.textContent = cartTotal.toFixed(2);
+    }
+
+    // Add some cart items dynamically after the page is loaded
+    window.addEventListener('DOMContentLoaded', () => {
+      addToCart('supermandress', 15.00);
+
+    });
+
+
+
+  </script>
+</body>
+
+</html>

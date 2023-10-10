@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
+    <link rel="stylesheet" href="../style.css" />
+    <title>All products</title>
+    <style>
+        .card {
+            margin: 1em auto;
+            width: calc(100%/5);
+        }
+
+        .card-title {
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-text {
+            text-align: center;
+        }
+
+        .card-btn {
+            text-align: center;
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        <!-- Navbar content -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand">Ecommerce</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="d-flex m-auto" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <a class="card-btn btn btn-primary ms-2" href="../login.html">Login</a>
+                    <a href="../cart.html" class="ms-2 "><i class="fa-solid fa-cart-shopping"
+                            style="font-size: 30px; color: rgb(61, 225, 99);"></i> </a>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+    <ul class="nav justify-content-center" style="background-color: antiquewhite;">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../Allproducts.html">All Products</a>
+        </li>
+        <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Womens
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="all.html">All</a></li>
+                <li><a class="dropdown-item" href="dresses.html">Dresses</a></li>
+                <li><a class="dropdown-item" href="pants.html">Pants</a></li>
+                <li><a class="dropdown-item" href="skirts.html">Skirts</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Mens
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="../mens/all1.html">All</a></li>
+                <li><a class="dropdown-item" href="../mens/shirt1.html">Shirts</a></li>
+                <li><a class="dropdown-item" href="../mens/pants.html">Pants</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../kids.html">Kids</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+        </li>
+    </ul>
+</header>
+
+<body>
+
+    <br>
+    <h1 style="text-align: center; background-color: rgb(134, 193, 193); border-radius: 15px;">All Products</h1>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230118/1BsF/63c8145caeb269c651ea71b4/-473Wx593H-443009130-navy-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">MISS ETHNIK<br>₹2,498</h5>
+                    <div class="card-text"> Dress Material with Dupatta</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230124/xPda/63cf7b81f997dd708e1dc796/-473Wx593H-443009021-olive-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">AVAASA MIX N' MATCH<br>₹662</h5>
+                    <div class="card-text">Printed Flared Kurta</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20220706/Eh6F/62c49711aeb26921af656fa7/-473Wx593H-441145929-maroon-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">FUSION<br>₹340</h5>
+                    <div class="card-text">Floral Print Flared Skirt</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230623/nYtm/64950ebbd55b7d0c63b05538/-473Wx593H-464937018-pink-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">GRIVA DESIGNER<br>₹1,000</h5>
+                    <div class="card-text">Unstitched Dress Material</div> <br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/h74/h2d/8996307075102/-473Wx593H-440585116-magntafusha-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">AVAASA MIX N' MATCH<br>₹849</h5>
+                    <div class="card-text">Elasticated Waistband</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20211214/NqLL/61b8b7b3aeb26901100c8396/-473Wx593H-469049666-multi-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">SAKURA<br>₹549</h5>
+                    <div class="card-text">Tie & Dye Tiered Maxi skirt</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230216/r27N/63ee0790aeb26924e374a22c/-473Wx593H-443008917-offwhite-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">FUSION<br>₹866</h5>
+                    <div class="card-text">Double Layered Dress</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230624/GVP5/649707d3a9b42d15c9f06737/-473Wx593H-465517910-purple-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">KIMISHA<br>₹1,199</h5>
+                    <div class="card-text"> Unstitched Dress Material</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230704/ULwU/64a34cb7a9b42d15c932a546/-473Wx593H-466272224-green-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">MARZIYAA<br>₹1,034</h5>
+                    <div class="card-text">Kanjeevaram Silk Saree</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230624/m3LD/6496955aeebac147fcf80fc6/-473Wx593H-465479793-white-MODEL9.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">KIANA HOUSE OF FASHION<br>₹675</h5>
+                    <div class="card-text">Straight Kurta Suit Set</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230628/Rj7d/649b69f8a9b42d15c9fd8fb9/-473Wx593H-465661017-orange-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">GRIVA DESIGNER<br>₹800</h5>
+                    <div class="card-text">Unstitched Dress Material</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card" style="width: 18rem;">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230623/dE5w/6494bf94d55b7d0c63a42581/-473Wx593H-464379068-yellow-MODEL.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">FASHIONUMA<br>₹1,449</h5>
+                    <div class="card-text">Anarkali Dress Material</div><br>
+                    <div class="card-btn"><a href="#" class="btn btn-primary"><i
+                                class="fa-solid fa-cart-shopping"></i>&nbsp;Add Cart</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="row1">
+            <div class="col d-flex">
+                <h4>Womens</h4>
+                <a href="all.html">All</a>
+                <a href="dresses.html">Dresses</a>
+                <a href="pants.html">Pants</a>
+                <a href="skirts.html">Skirts</a>
+            </div>
+            <div class="col d-flex">
+                <h4>Mens</h4>
+                <a href="../mens/all1.html">All</a>
+                <a href="../mens/shirt1.html">Shirts</a>
+                <a href="../mens/pants.html">Pants</a>
+            </div>
+            <div class="col d-flex">
+                <h3><a href="../kids.html">Kids</a></h3>
+            </div>
+            <div class="col d-flex">
+                <h4>Links</h4>
+                <a href="../index.html">Home</a>
+                <a href="../login.html">Login</a>
+                <a href="../contact.html">Contact</a>
+            </div>
+        </div>
+        <hr>
+        <p>Copyright &copyEcommerce 2022-23</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
